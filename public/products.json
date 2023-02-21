@@ -1,0 +1,51 @@
+[
+    {
+      "_id": "1",
+      "service_id": "101",
+      "title": "Haircut",
+      "image": "https://i.ibb.co/kHYW6nC/haircut.jpg",
+      "price": "$25",
+      "description": "Get a trendy new haircut to freshen up your look."
+    },
+    {
+      "_id": "2",
+      "service_id": "102",
+      "title": "Coloring",
+      "image": "https://i.ibb.co/YyXR969/coloring.jpg",
+      "price": "$50",
+      "description": "Change your hair color to a bold new shade."
+    },
+    {
+      "_id": "3",
+      "service_id": "103",
+      "title": "Perming",
+      "image": "https://i.ibb.co/fSkbRFs/perming.jpg",
+      "price": "$75",
+      "description": "Get beautiful curls with a perm treatment."
+    },
+    {
+      "_id": "4",
+      "service_id": "104",
+      "title": "Styling",
+      "image": "https://i.ibb.co/5G168V5/styling.jpg",
+      "price": "$30",
+      "description": "Have your hair styled for a special event or occasion."
+    },
+    {
+      "_id": "5",
+      "service_id": "105",
+      "title": "Extensions",
+      "image": "https://i.ibb.co/BBjH76m/extensions.jpg",
+      "price": "$100",
+      "description": "Add length and volume to your hair with extensions."
+    },
+    {
+      "_id": "6",
+      "service_id": "106",
+      "title": "Bridal",
+      "image": "https://i.ibb.co/syTh4YS/bridal.jpg",
+      "price": "$150",
+      "description": "Get a special bridal hairdo for your wedding day."
+    }
+  ]
+  
