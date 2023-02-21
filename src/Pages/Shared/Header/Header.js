@@ -7,6 +7,8 @@ const Header = () => {
     const navMenu = <>
         <li> <Link className='font-semibold' to='/home'> Home </Link> </li>
         <li> <Link className='font-semibold'to='/about'> About </Link> </li>
+        <li> <Link className='font-semibold'to='/login'> Login </Link> </li>
+        <li> <Link className='font-semibold'to='/register'> Register </Link> </li>
     </>
     return (
         <div className="navbar h-20 mb-6 bg-base-100">
