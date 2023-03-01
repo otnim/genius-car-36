@@ -1,15 +1,37 @@
-import React from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import loginImg from '../../../assets/images/login/login.svg';
-import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
-
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
+    const { createUser, googleSignIn } = useContext(AuthContext);
+
     const handleRegister = event => {
         event.preventDefault();
-        console.log("here me");
-        
+        //console.log("here me");
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        createUser(email, password)
+            .then(userCredential => {
+                const user = userCredential.user;
+                alert('User registered successfully.');
+            })
+            .catch(err => {
+                console.log(err.message);
+            })
     }
+
+    const handleGoogleSignUp = event => {
+        event.preventDefault();
+        const googleProvider = new GoogleAuthProvider();
+        googleSignIn(googleProvider)
+        .then(result => {
+            alert('Success');
+        })
+
+    }
+
     return (
         <div className="hero bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
@@ -29,7 +51,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="email" className="input input-bordered" required/>
+                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -39,12 +61,15 @@ const Register = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                            <input type="submit" value="Sign Up" className="btn btn-primary text-orange-600"/>
+                            <input type="submit" value="Sign Up" className="btn btn-primary text-orange-600" />
                         </div>
                         <label className="label">
                             <h1>Already have an account? <Link to="/login" className="label-text-alt link link-hover text-orange-600">Login</Link></h1>
                         </label>
                     </form>
+
+                    <h1 className='text-center'> Or Sign Up with </h1>
+                    <button onClick={handleGoogleSignUp} className="btn btn-outline btn-success"> Google </button>
                 </div>
             </div>
         </div>
