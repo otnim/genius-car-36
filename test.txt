@@ -1,1 +1,2 @@
 Nothing is stable. This is new branch.
+New line added.
